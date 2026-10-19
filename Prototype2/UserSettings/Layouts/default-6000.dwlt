@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2048
     height: 1060.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 49
+  controlID: 39
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -662,20 +662,20 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Adam/Scenes
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\temp\Proto-2\Prototype2
+  m_LastProjectPath: C:\temp\Proto-2\Proto-2\Prototype2
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 62492
+    - m_Data: 62532
     m_LastClickedID:
-      m_Data: 62492
+      m_Data: 62532
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 62432
-    - m_Data: 62434
+    - m_Data: 62472
+    - m_Data: 62474
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -864,13 +864,11 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -48760
-      - m_Data: -48268
+      - m_Data: -48830
+      - m_Data: -48466
+      - m_Data: -48296
       - m_Data: -47032
-      - m_Data: 62518
-      - m_Data: 62586
-      - m_Data: 63036
-      - m_Data: 63062
+      - m_Data: 62696
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1485,7 +1483,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.10090789, y: -0.014330585, z: -0.0014537724, w: 0.9947907}
     speed: 2
-    m_Value: {x: -0.102101676, y: -0.014328842, z: -0.0014709696, w: 0.9946697}
+    m_Value: {x: 0.10090789, y: 0.014330585, z: 0.0014537724, w: -0.9947907}
   m_Size:
     m_Target: 10
     speed: 2
