@@ -3,25 +3,34 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // Call this when clicking "Start"
+    // --- MAIN MENU NAVIGATION ---
     public void PlayGame()
     {
         SceneManager.LoadScene("GameScene");
     }
 
-    // Call this when clicking "Settings"
     public void OpenSettings()
     {
         SceneManager.LoadScene("SettingsMenu");
     }
 
-    // Call this when clicking "Back" inside the Settings scene
     public void BackToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
-    // Call this when clicking "Quit"
+    // --- PAUSE MENU NAVIGATION ---
+    public void OpenSettingsPauseMenu()
+    {
+        SceneManager.LoadScene("SettingsPauseMenu");
+    }
+
+    public void BackToPauseMenu()
+    {
+        SceneManager.LoadScene("PauseMenu");
+    }
+
+    // --- QUIT ---
     public void QuitGame()
     {
         Debug.Log("Quit Game pressed!");
