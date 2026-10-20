@@ -174,6 +174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7055bb2dbf64284896055effd075bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
+  ghostLimit: 5
+  ghostRef: {fileID: 296852021012483266, guid: ce2d3c0fc8bafe94b8a5beb75ff50f70, type: 3}
 --- !u!114 &7972779253230716560
 MonoBehaviour:
   m_ObjectHideFlags: 0
