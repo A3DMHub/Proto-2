@@ -6,7 +6,8 @@ public class MainMenuController : MonoBehaviour
     // --- MAIN MENU NAVIGATION ---
     public void PlayGame()
     {
-        SceneManager.LoadScene("GameScene");
+        // Loads the level created in Assets/Freyja/Scene/
+        SceneManager.LoadScene("Tutorial level");
     }
 
     public void OpenSettings()
@@ -16,18 +17,9 @@ public class MainMenuController : MonoBehaviour
 
     public void BackToMainMenu()
     {
+        // Unpause time if returning to main menu while paused
+        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
-    }
-
-    // --- PAUSE MENU NAVIGATION ---
-    public void OpenSettingsPauseMenu()
-    {
-        SceneManager.LoadScene("SettingsPauseMenu");
-    }
-
-    public void BackToPauseMenu()
-    {
-        SceneManager.LoadScene("PauseMenu");
     }
 
     // --- QUIT ---

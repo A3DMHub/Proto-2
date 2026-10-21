@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Adam/Scenes/MainMenu.unity
     guid: a4d1b03ab00492b4285143fd3128f9b3
   - enabled: 1
+    path: Assets/Freyja/Scene/Tutorial level.unity
+    guid: b5a9671250466de49a6879db772b96ac
+  - enabled: 1
     path: Assets/Adam/Scenes/SettingsMenu.unity
     guid: 42fe1335692e38c44a0e7978f1ec94f1
   - enabled: 1
