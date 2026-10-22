@@ -7,7 +7,8 @@ public class DamageScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            PlayerLevelLogic LevelLogic = collision.gameObject.GetComponent<PlayerLevelLogic>();
+            LevelLogic.OnDeath();
         }
     }
 }
