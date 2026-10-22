@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PauseMenuController : MonoBehaviour
@@ -8,10 +9,10 @@ public class PauseMenuController : MonoBehaviour
 
     public static bool isPaused = false;
 
-    void Update()
+
+    public void OnPause(InputValue value)
     {
-        // Toggle Pause Menu with 'P' key
-        if (Input.GetKeyDown(KeyCode.P))
+        if (value.isPressed)
         {
             if (isPaused)
             {
@@ -23,6 +24,7 @@ public class PauseMenuController : MonoBehaviour
             }
         }
     }
+         
 
     public void Resume()
     {

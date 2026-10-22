@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class NewMonoBehaviourScript : MonoBehaviour
+public class Ghosts : MonoBehaviour
 {
     public int ghostLimit;
     public GameObject ghostRef;
@@ -10,7 +10,13 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private List<GameObject> ghosts = new List<GameObject>();
 
-    private void TeleportToStart()
+
+    private void Awake()
+    {
+        startPosition = transform.position;
+    }
+
+    public void TeleportToStart()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
         rb.position = startPosition;
@@ -21,7 +27,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
     {
         if (value.isPressed && ghosts.Count < ghostLimit)
         {
-            Vector3 position = new Vector3(transform.position.x, transform.position.y, 0);
+            Vector3 position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             GameObject spawnedGhost = Instantiate(ghostRef, position, Quaternion.identity);
             ghosts.Add(spawnedGhost);
             TeleportToStart();

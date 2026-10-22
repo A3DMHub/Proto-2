@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
     {
         bool grounded = IsGrounded;
 
-        float xVel = moveInput.x * moveSpeed;
+        float xVel = -moveInput.x * moveSpeed;
         float yVel = rb.linearVelocity.y;
 
         if (grounded && yVel <= 0f)
