@@ -106,6 +106,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  spriteRenderer: {fileID: 0}
 --- !u!114 &4192522913106182858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f75a7afa2f2b3d49834ecc9a15ba79f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuController
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 6419113067193705761, guid: 702e5fe042ee45641ae80895be844195, type: 3}
 --- !u!1 &471753282448609528
 GameObject:
   m_ObjectHideFlags: 0

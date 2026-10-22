@@ -20,6 +20,7 @@ public class PauseMenuController : MonoBehaviour
             }
             else
             {
+                Debug.Log("Activating: " + pauseMenuUI.name, pauseMenuUI);
                 Pause();
             }
         }
