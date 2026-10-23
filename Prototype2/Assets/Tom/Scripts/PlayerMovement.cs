@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground")]
     public LayerMask groundLayer;
 
+    [Header("Sprite")]
+    public SpriteRenderer spriteRenderer;
+
     private Rigidbody rb;
     private Vector2 moveInput;
     private bool jumpPressed;
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
@@ -44,6 +48,15 @@ public class PlayerMovement : MonoBehaviour
 
         float xVel = -moveInput.x * moveSpeed;
         float yVel = rb.linearVelocity.y;
+
+        if (-moveInput.x < 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (-moveInput.x > 0)
+        {
+            spriteRenderer.flipX = true;
+        }
 
         if (grounded && yVel <= 0f)
             yVel = 0f;

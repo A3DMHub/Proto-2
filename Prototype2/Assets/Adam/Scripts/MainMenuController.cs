@@ -3,10 +3,15 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // --- MAIN MENU NAVIGATION ---
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f; // Resume normal gameplay speed
+        SceneManager.LoadScene("Tutorial level"); // Reload/return to the level
+    }
+
     public void PlayGame()
     {
-        // Loads the level created in Assets/Freyja/Scene/
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Tutorial level");
     }
 
@@ -17,12 +22,10 @@ public class MainMenuController : MonoBehaviour
 
     public void BackToMainMenu()
     {
-        // Unpause time if returning to main menu while paused
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
 
-    // --- QUIT ---
     public void QuitGame()
     {
         Debug.Log("Quit Game pressed!");

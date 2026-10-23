@@ -20,6 +20,7 @@ public class PauseMenuController : MonoBehaviour
             }
             else
             {
+                Debug.Log("Activating: " + pauseMenuUI.name, pauseMenuUI);
                 Pause();
             }
         }
@@ -46,6 +47,8 @@ public class PauseMenuController : MonoBehaviour
         // Enable cursor for UI navigation
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        SceneManager.LoadScene("PauseMenu");
     }
 
     public void OpenSettings()
