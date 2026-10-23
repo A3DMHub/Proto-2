@@ -47,6 +47,8 @@ public class PauseMenuController : MonoBehaviour
         // Enable cursor for UI navigation
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        SceneManager.LoadScene("PauseMenu");
     }
 
     public void OpenSettings()
