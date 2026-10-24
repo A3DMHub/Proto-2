@@ -4,12 +4,43 @@ public class ButtonScript : MonoBehaviour
 {
     public GameObject Device;
     public MovingPlatform platMove;
+    public bool IsFan = false;
+    public int FanOn = 0;
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" /*|| collision.gameObject.tag == "Trigger"*/)
+        if (!IsFan)
         {
-            platMove.IsMove = true;
+            if (collision.gameObject.tag == "Player" /*|| collision.gameObject.tag == "Trigger"*/)
+            {
+                platMove.IsMove = true;
+            }
+        }
+        else
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                FanOn += 1;
+            }
+
+        }
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (!IsFan)
+        {
+            if (collision.gameObject.tag == "Player" /*|| collision.gameObject.tag == "Trigger"*/)
+            {
+                platMove.IsMove = false;
+            }
+        }
+        else
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                FanOn -= 1;
+            }
+
         }
     }
 }
