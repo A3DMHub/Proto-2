@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 48
+  controlID: 43
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 49
+  controlID: 44
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 50
+  controlID: 45
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -650,7 +650,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tom/Prefabs
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -660,23 +660,22 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Tom/Prefabs
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\GitHub\Proto-2\Prototype2
   m_LockTracker:
     m_IsLocked: 0
   m_LastLocalAssetsSearchArea: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 137}
+    scrollPos: {x: 0, y: 79}
     m_SelectedIDs:
-    - m_Data: 52080
+    - m_Data: 48542
     m_LastClickedID:
-      m_Data: 52080
+      m_Data: 48542
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48308
-    - m_Data: 48614
-    - m_Data: 48634
+    - m_Data: 48542
+    - m_Data: 48648
     - m_Data: 1000000000
     - m_Data: 2147483647
     m_RenameOverlay:
@@ -711,7 +710,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 48308
+    - m_Data: 48542
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -768,7 +767,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 19}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 209
@@ -868,15 +867,11 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -6250
-      - m_Data: -6166
-      - m_Data: -4746
-      - m_Data: -1478
-      - m_Data: 47720
+      - m_Data: -1350
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: TutorialText_BigJump (1)
+        m_OriginalName: TutorialText_BigJump (1)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
@@ -884,10 +879,10 @@ MonoBehaviour:
           width: 0
           height: 0
         m_UserData:
-          m_Data: 0
+          m_Data: -8652
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 4}
@@ -1437,9 +1432,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 10.188348, y: 25.799757, z: 4.6147757}
+    m_Target: {x: 8.939236, y: 25.801228, z: 16.277592}
     speed: 2
-    m_Value: {x: 10.188348, y: 25.799757, z: 4.6147757}
+    m_Value: {x: 8.939236, y: 25.801228, z: 16.277592}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -1485,9 +1480,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0
   m_Rotation:
-    m_Target: {x: -0.004372021, y: 0.98984826, z: -0.13898937, w: -0.03151475}
+    m_Target: {x: 0.000021016143, y: 0.9975606, z: -0.07044619, w: -0.00032166415}
     speed: 2
-    m_Value: {x: -0.004371737, y: 0.98978394, z: -0.13898034, w: -0.0315127}
+    m_Value: {x: 0.0000210152, y: 0.9975158, z: -0.07044303, w: -0.00032164968}
   m_Size:
     m_Target: 0.29039687
     speed: 2
