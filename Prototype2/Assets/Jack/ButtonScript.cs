@@ -11,7 +11,7 @@ public class ButtonScript : MonoBehaviour
     {
         if (!IsFan)
         {
-            if (collision.gameObject.tag == "Player" /*|| collision.gameObject.tag == "Trigger"*/)
+            if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Trigger" || collision.gameObject.tag == "GrabbableTrigger")
             {
                 platMove.IsMove = true;
             }
@@ -29,7 +29,7 @@ public class ButtonScript : MonoBehaviour
     {
         if (!IsFan)
         {
-            if (collision.gameObject.tag == "Player" /*|| collision.gameObject.tag == "Trigger"*/)
+            if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Trigger" || collision.gameObject.tag == "GrabbableTrigger")
             {
                 platMove.IsMove = false;
             }
