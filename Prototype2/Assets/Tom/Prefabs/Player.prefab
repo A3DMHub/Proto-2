@@ -107,6 +107,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   spriteRenderer: {fileID: 0}
+  standSprite: {fileID: 21300000, guid: 830a6f6ea61e62d41803ba0662ab9ba4, type: 3}
+  crouchSprite: {fileID: 21300000, guid: 75690569c9070554f84ce8b7682fea59, type: 3}
 --- !u!114 &4192522913106182858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +124,8 @@ MonoBehaviour:
   ghostLimit: 0
   ghostRef: {fileID: 296852021012483266, guid: ce2d3c0fc8bafe94b8a5beb75ff50f70, type: 3}
   startPosition: {x: 0, y: 0, z: 0}
+  ghostStandSprite: {fileID: 21300000, guid: 689f835c1a313184eb389b6511b9b882, type: 3}
+  ghostCrouchSprite: {fileID: 21300000, guid: e7c9a76ff1084df46a172d0e1c0c40db, type: 3}
 --- !u!114 &-2799716824341600736
 MonoBehaviour:
   m_ObjectHideFlags: 0

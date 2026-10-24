@@ -12,22 +12,35 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground")]
     public LayerMask groundLayer;
 
-    [Header("Sprite")]
+    [Header("Sprites & Colliders")]
     public SpriteRenderer spriteRenderer;
+    public Sprite standSprite;
+    public Sprite crouchSprite;
+
+    [Header("Crouch Settings")]
+    public float standingColliderHeight = 0.8f;
+    public float standingColliderCenterY = 0.05f;
+    public float crouchingColliderHeight = 0.4f;
+    public float crouchingColliderCenterY = -0.15f;
 
     private Rigidbody rb;
+    private BoxCollider boxCollider;
     private Vector2 moveInput;
     private bool jumpPressed;
+    private bool isCrouching = false;
 
     private readonly HashSet<Collider> groundContacts = new HashSet<Collider>();
     private readonly Dictionary<Collider, Vector3> wallNormals = new Dictionary<Collider, Vector3>();
 
     private bool IsGrounded => groundContacts.Count > 0;
+    public bool IsCrouching => isCrouching;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider>();
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Start()
@@ -37,10 +50,60 @@ public class PlayerMovement : MonoBehaviour
                        | RigidbodyConstraints.FreezeRotationY
                        | RigidbodyConstraints.FreezeRotationZ;
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+
+        UpdateCrouchState(false);
     }
 
     public void OnMove(InputValue value) => moveInput = value.Get<Vector2>();
     public void OnJump(InputValue value) => jumpPressed = value.isPressed;
+
+    private void Update()
+    {
+        // Continuously check if the 'C' key is held down or released
+        bool crouchKeyHeld = Keyboard.current != null && Keyboard.current.cKey.isPressed;
+
+        if (crouchKeyHeld != isCrouching)
+        {
+            UpdateCrouchState(crouchKeyHeld);
+        }
+    }
+
+    private void UpdateCrouchState(bool crouching)
+    {
+        isCrouching = crouching;
+
+        if (spriteRenderer != null)
+        {
+            if (isCrouching && crouchSprite != null)
+            {
+                spriteRenderer.sprite = crouchSprite;
+            }
+            else if (!isCrouching && standSprite != null)
+            {
+                spriteRenderer.sprite = standSprite;
+            }
+        }
+
+        if (boxCollider != null)
+        {
+            Vector3 size = boxCollider.size;
+            Vector3 center = boxCollider.center;
+
+            if (isCrouching)
+            {
+                size.y = crouchingColliderHeight;
+                center.y = crouchingColliderCenterY;
+            }
+            else
+            {
+                size.y = standingColliderHeight;
+                center.y = standingColliderCenterY;
+            }
+
+            boxCollider.size = size;
+            boxCollider.center = center;
+        }
+    }
 
     private void FixedUpdate()
     {

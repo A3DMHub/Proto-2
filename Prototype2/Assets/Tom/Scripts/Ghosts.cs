@@ -8,8 +8,11 @@ public class Ghosts : MonoBehaviour
     public GameObject ghostRef;
     public Vector3 startPosition;
 
-    private List<GameObject> ghosts = new List<GameObject>();
+    [Header("Ghost Sprites")]
+    public Sprite ghostStandSprite;
+    public Sprite ghostCrouchSprite;
 
+    private List<GameObject> ghosts = new List<GameObject>();
 
     private void Awake()
     {
@@ -29,10 +32,27 @@ public class Ghosts : MonoBehaviour
         {
             Vector3 position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             GameObject spawnedGhost = Instantiate(ghostRef, position, Quaternion.identity);
+
+            PlayerMovement playerMovement = GetComponent<PlayerMovement>();
+            SpriteRenderer ghostRenderer = spawnedGhost.GetComponentInChildren<SpriteRenderer>();
+
+            if (playerMovement != null && ghostRenderer != null)
+            {
+                if (playerMovement.IsCrouching)
+                {
+                    ghostRenderer.sprite = ghostCrouchSprite;
+                }
+                else
+                {
+                    ghostRenderer.sprite = ghostStandSprite;
+                }
+            }
+
             ghosts.Add(spawnedGhost);
             TeleportToStart();
         }
     }
+
     public void OnKillNewGhost(InputValue value)
     {
         if (ghosts.Count <= 0)
