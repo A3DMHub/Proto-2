@@ -101,14 +101,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c736343da956d3d4cab017e379d83130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 5
-  jumpForce: 5
+  moveSpeed: 3
+  jumpForce: 4.2
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   spriteRenderer: {fileID: 0}
   standSprite: {fileID: 21300000, guid: 830a6f6ea61e62d41803ba0662ab9ba4, type: 3}
   crouchSprite: {fileID: 21300000, guid: 75690569c9070554f84ce8b7682fea59, type: 3}
+  standingColliderHeight: 0.8
+  standingColliderCenterY: 0.05
+  crouchingColliderHeight: 0.4
+  crouchingColliderCenterY: -0.15
 --- !u!114 &4192522913106182858
 MonoBehaviour:
   m_ObjectHideFlags: 0
