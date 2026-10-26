@@ -6,7 +6,7 @@ public class Ghosts : MonoBehaviour
 {
     public int ghostLimit;
     public GameObject ghostRef;
-    public Vector3 startPosition;
+    public GameObject lastCheckpoint;
 
     [Header("Ghost Sprites")]
     public Sprite ghostStandSprite;
@@ -16,14 +16,14 @@ public class Ghosts : MonoBehaviour
 
     private void Awake()
     {
-        startPosition = transform.position;
+        TeleportToStart();
     }
 
     public void TeleportToStart()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
-        rb.position = startPosition;
         rb.linearVelocity = Vector2.zero;
+        transform.position = lastCheckpoint.transform.position;
     }
 
     public void OnCreateGhost(InputValue value)

@@ -11,7 +11,7 @@ public class LevelStart : MonoBehaviour
         Vector3 position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         GameObject spawnedPlayer = Instantiate(playerRef, position, Quaternion.identity);
         Ghosts ghostScript = spawnedPlayer.GetComponent<Ghosts>();
-        ghostScript.startPosition = position;
+        ghostScript.lastCheckpoint = gameObject;
         ghostScript.ghostLimit = GhostLimit;
     }
 
