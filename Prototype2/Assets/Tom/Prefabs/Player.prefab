@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
   ghostLimit: 0
   ghostRef: {fileID: 296852021012483266, guid: ce2d3c0fc8bafe94b8a5beb75ff50f70, type: 3}
-  startPosition: {x: 0, y: 0, z: 0}
+  lastCheckpoint: {fileID: 1090529366189489277, guid: 8d35a6d474691294fb51526a520afe23, type: 3}
   ghostStandSprite: {fileID: 21300000, guid: 689f835c1a313184eb389b6511b9b882, type: 3}
   ghostCrouchSprite: {fileID: 21300000, guid: e7c9a76ff1084df46a172d0e1c0c40db, type: 3}
 --- !u!114 &-2799716824341600736

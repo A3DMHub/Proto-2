@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelStart
   playerRef: {fileID: 296852021012483266, guid: d0abb65e365e0784a9bba7b3f5e0b700, type: 3}
+  GhostLimit: 5
